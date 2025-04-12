@@ -85,10 +85,10 @@ export const deleteproductcontroller = {
 export const updateproductcontroller = {
     updateproduct:async(req,res)=>{
         const userId = req.user 
-    console.log("userId",userId); //userid
+    console.log("userId",userId); 
     const {productname,description,price,category,imageUrl} = req.body
     const uploadedimage = req.file?req.file.filename:imageUrl
-    const {id} = req.params //project id
+    const {id} = req.params 
     console.log("req params: ",req.params);
     try{
         const updateproduct = await product.findByIdAndUpdate({_id:id},{productname,description,price,category,imageUrl:uploadedimage,userId},{new:true})

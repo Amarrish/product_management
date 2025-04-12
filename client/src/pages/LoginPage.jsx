@@ -25,11 +25,11 @@ const LoginPage = () => {
         const res = await loginAPI({email,password})
         console.log(res);
         if(res.status===200){
-        //    save res
+       
         localStorage.setItem("existingUser",JSON.stringify(res.data.existingUser))
-        // localStorage.setItem("Role",res.data.role)
+        
         sessionStorage.setItem("token",res.data.token)
-            // reset state
+            
             setUserData({
                 email:"",password:""
             })

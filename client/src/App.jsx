@@ -11,7 +11,6 @@ import Registerpage from './pages/Registerpage'
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
-  
 
   return (
     <>
@@ -23,11 +22,6 @@ function App() {
       <Route path='/addproduct' element={<Addproject/>}/>
       <Route path='/updateproduct/:id' element={<Updateproject/>}/>
       <Route path='/dashboard' element={<Dashboard/>}/>
-      {/* <LoginPage/> */}
-      {/* <Registerpage/> */}
-      {/* <Addproject/> */}
-      {/* <Updateproject/> */}
-      {/* <Dashboard/> */}
       </Routes>
       <Footer/>
     </>

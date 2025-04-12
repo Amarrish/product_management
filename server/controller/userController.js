@@ -35,7 +35,7 @@ export const userloginController = {
       const { email, password } = req.body;
 
       try{
-        // check user exist
+        
         const existingUser = await users.findOne({email})
         if(existingUser && await bcrypt.compare(password, existingUser.password)){
             // generate token

@@ -30,7 +30,7 @@ const Registerpage = () => {
             if(res.status===200){
                 console.log(res.data);
                 alert(`${res.data.username} has successfully registered...`)
-                // reset state
+               
                 setUserData({
                     username:"",email:"",password:""
                 })

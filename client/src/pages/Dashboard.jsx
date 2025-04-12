@@ -43,7 +43,7 @@ const Dashboard = () => {
     const result = await userProductAPI(reqHeader);
     if (result.status === 200) {
       setProducts(result.data);
-      setFilteredProducts([]); // Reset filter on new fetch
+      setFilteredProducts([]); 
     } else {
       alert(result.response.data);
     }
@@ -64,7 +64,7 @@ const Dashboard = () => {
     const result = await deleteproductAPI(productId, reqHeader);
     if (result.status === 200) {
       alert('Product deleted successfully');
-      getuserProducts(); // refresh
+      getuserProducts(); 
     } else {
       alert(result.response?.data || 'Failed to delete');
     }
